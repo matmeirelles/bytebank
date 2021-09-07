@@ -3,6 +3,7 @@ package br.com.alura.bytebank.teste
 import br.com.alura.bytebank.modelo.Analista
 import br.com.alura.bytebank.modelo.CalculadoraBonificacao
 import br.com.alura.bytebank.modelo.Diretor
+import br.com.alura.bytebank.modelo.Funcionario
 import br.com.alura.bytebank.modelo.Gerente
 
 fun testaFuncionarios() {
@@ -62,10 +63,12 @@ fun testaFuncionarios() {
         salario = 3400.0
     )
 
-    val calculadora = CalculadoraBonificacao()
+    var calculadora = CalculadoraBonificacao()
+
     calculadora.registra(mateus)
-    calculadora.registra(mariana)
     calculadora.registra(fran)
     calculadora.registra(maria)
+    calculadora.registra(mariana)
+
     println("total de bonificações: ${calculadora.total}")
 }

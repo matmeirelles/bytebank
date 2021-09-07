@@ -1,26 +1,27 @@
 package br.com.alura.bytebank
 
 import br.com.alura.bytebank.modelo.*
-import br.com.alura.bytebank.teste.testaContasDiferentes
-import br.com.alura.bytebank.teste.testeObjectExpression
 
 fun main() {
 
-    var cliente1 = Cliente(
-        nome = "Mateus",
-        cpf = "123.123.123-22",
-        senha = 123
-    )
+    val endereco = Endereco(logradouro = "Rua Colômbia")
+    val enderecoNovo = Endereco(logradouro = "Rua Colômbia")
 
-    var contaPoupanca = ContaPoupanca(titular = cliente1, numero = 1000)
-    var contaCorrente = ContaCorrente(titular = cliente1, numero = 1001)
+    println(endereco.equals(enderecoNovo))
 
-    testaContasDiferentes()
+    println("${endereco.javaClass}@${Integer.toHexString(endereco.hashCode())}")
 
-    println("Total de contas: ${Conta.total}")
+    println(endereco.logradouro)
+    println(endereco.hashCode())
+
+    println(enderecoNovo.logradouro)
+    println(enderecoNovo.hashCode())
+
+    println(endereco.equals(enderecoNovo))
+
 }
 
-
-
-
-
+fun imprime(valor: Any): Any {
+    println(valor)
+    return valor
+}
