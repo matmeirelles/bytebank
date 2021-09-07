@@ -5,7 +5,7 @@ Primeiro projeto em Kotlin. Aprendendo aqui a utilização de:
 2. Polimorfismo
 3. Abstração
 4. Interfaces
-5. Object expressiona
+5. Object expressions
 6. Object declaration
 7. Companion objects
 8. Classe Any
@@ -14,7 +14,7 @@ Primeiro projeto em Kotlin. Aprendendo aqui a utilização de:
    3. Membros da classe Any
    4. Sobrepondo as funções básicas da classe Any
       1. toString()
-      2. hasCode()
+      2. hashCode()
       3. equals()
 
 Pasta **teste** contém as funções com os testes realizados durante os exercícios. Para utilização basta copiar uma das funções para dentro da função **main**.
