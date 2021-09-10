@@ -9,7 +9,7 @@ class Endereco(
     var cidade: String = "",
     var estado: String = "",
     var cep: String = "",
-    var complemento: String = ""
+    var complemento: String? = ""
 ) {
     override fun toString(): String {
         return """Endereco:

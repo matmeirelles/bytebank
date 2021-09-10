@@ -1,5 +1,7 @@
 package br.com.alura.bytebank.teste
 
+import br.com.alura.bytebank.exception.FalhaAutenticacaoException
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
@@ -41,10 +43,23 @@ fun testaContasDiferentes() {
     println("Saldo conta 1: ${conta1.saldo}")
     println("Saldo conta 2: ${conta2.saldo}")
 
-    conta1.transfere(
-        contaDestino = conta2,
-        valor = 200.0
-    )
+    try {
+        conta1.transfere(
+            contaDestino = conta2,
+            valor = 200.0,
+            senha = 1234
+        )
+    } catch (e: SaldoInsuficienteException) {
+        println("Sem saldo para transferir!")
+        e.printStackTrace()
+    } catch (e: FalhaAutenticacaoException) {
+        println("Falha na autenticação. Não é possível realizar a transferência")
+        e.printStackTrace()
+    } catch (e: Exception) {
+        println("Erro desconhecido")
+        e.printStackTrace()
+    }
+
 
     println("Saldo conta 1: ${conta1.saldo}")
     println("Saldo conta 2: ${conta2.saldo}")

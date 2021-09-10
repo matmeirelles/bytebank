@@ -1,16 +1,24 @@
 package br.com.alura.bytebank.modelo
 
+import br.com.alura.bytebank.exception.FalhaAutenticacaoException
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
+
 interface Transferencia {
 
     val saldo: Double
-    fun transfere(contaDestino: Conta, valor: Double): Boolean {
+    val titular: Cliente
+    fun transfere(contaDestino: Conta, valor: Double, senha: Int) {
 
-        if (saldo >= valor) {
-            this.saque(valor)
-            contaDestino.deposita(valor)
-            return true
+        if (saldo < valor) {
+            throw SaldoInsuficienteException()
         }
-        return false
+        if (!titular.autentica(senha)) {
+            throw FalhaAutenticacaoException()
+        }
+
+        this.saque(valor)
+        contaDestino.deposita(valor)
+
     }
 
     fun saque(valor: Double): Boolean
