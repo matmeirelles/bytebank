@@ -26,5 +26,29 @@ Primeiro projeto em Kotlin. Aprendendo aqui a utilização de:
     2. !! Operator
     3. Safe Calls
     4. Safe Casts
+13. Arrays
+    1. intArrayOf
+    2. doubleArrayOf
+    3. arrayOf
+    4. .forEach
+    5. .forEachIndexed
+    6. .contentToString()
+    7. .indices
+    8. MultableList()
+    9. .lastIndex
+    10. .any {}
+    11. .all {}
+    12. .filter {}
+    13. .find {}
+    14. .reduce {}
+    15. .fold() {}
+14. BigDecimal
+    1. Criando Array
+    2. Extensions Functions
+    3. .setScale()
+15. Lists
+    1. multableListOf<>()
+    2. Listas imutáveis
+    3. groupBy{}
 
 Pasta **teste** contém as funções com os testes realizados durante os exercícios. Para utilização basta copiar uma das funções para dentro da função **main**.
