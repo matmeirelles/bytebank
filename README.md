@@ -47,7 +47,7 @@ Primeiro projeto em Kotlin. Aprendendo aqui a utilização de:
     2. Extensions Functions
     3. .setScale()
 15. Lists
-    1. multableListOf<>()
+    1. mutableListOf<>()
     2. Listas imutáveis
     3. groupBy{}
 
