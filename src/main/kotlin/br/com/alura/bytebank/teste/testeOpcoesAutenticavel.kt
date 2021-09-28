@@ -29,7 +29,13 @@ fun testeOpcoesAutenticavel() {
 
     val sistemaInterno = SistemaInterno()
 
-    sistemaInterno.entra(analista, senha = 1000)
-    sistemaInterno.entra(gerente, senha = 2000)
-    sistemaInterno.entra(cliente, senha = 3000)
+    sistemaInterno.entra(analista, senha = 1000) {
+        println("Testando autenticação")
+    }
+    sistemaInterno.entra(gerente, senha = 2000) {
+        println("Testando autenticação")
+    }
+    sistemaInterno.entra(cliente, senha = 3000) {
+        println("Testando autenticação")
+    }
 }

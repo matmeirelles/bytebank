@@ -4,7 +4,7 @@ abstract class Conta(
     val titular: Cliente,
     val numero: Int
 ) : Autenticavel by titular {
-    var saldo = 0.0
+    var saldo: Double = 0.0
         protected set
 
     companion object {
@@ -15,7 +15,6 @@ abstract class Conta(
 
     init {
 
-        println("Criando conta")
         total++
     }
 

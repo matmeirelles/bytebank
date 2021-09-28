@@ -2,7 +2,6 @@ package br.com.alura.bytebank.teste
 
 import br.com.alura.bytebank.livros.Livro
 import br.com.alura.bytebank.livros.Prateleira
-import br.com.alura.bytebank.livros.imprimeComMarcadores
 
 fun testaListasImutaveis() {
     val prateleira = Prateleira(
@@ -37,6 +36,4 @@ fun testaListasImutaveis() {
     val porAutor = prateleira.ordenarPorAutor()
     val porAnoPublicacao = prateleira.ordenarPorAnoPublicacao()
 
-    porAutor.imprimeComMarcadores()
-    porAnoPublicacao.imprimeComMarcadores()
 }

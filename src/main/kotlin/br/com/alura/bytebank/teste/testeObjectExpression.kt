@@ -14,7 +14,9 @@ fun testeObjectExpression() {
     }
 
     val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(usuario = fran, senha = 1234)
+    sistemaInterno.entra(usuario = fran, senha = 1234) {
+        println("Testando autenticação")
+    }
 
     println("nome do cliente: ${fran.nome}")
 }
